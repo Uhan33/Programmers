@@ -6,12 +6,10 @@ function solution(numbers) {
     else {
         for(let i = 0; i < numbers.length-1; i++) {
             for(let j = i+1; j < numbers.length; j++) {
-                // if(!answer.find(e => e === numbers[i] + numbers[j]))
+                if(!answer.find(e => e === numbers[i] + numbers[j]))
                     answer.push(numbers[i] + numbers[j]);
             }   
         }
-        
-        answer = [...new Set(answer)];
     
         for(let i = 0; i < answer.length-1; i++) {
             for(let j = i+1; j < answer.length; j++) {
